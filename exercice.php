@@ -74,3 +74,108 @@ for ($i = 0; $i < count($tab6); $i++) {
 if ($somme > 600) {
     echo "la somme est supérieur à 600 ";
 }
+
+
+echo "<br/> ============================================ <br/>";
+
+$tableau = [11, 15, 100, 150, 699, 850, -10, -20, 100, -100, -200, 16];
+$moyenne = [];
+$inferieur = [];
+$superieur = [];
+for ($i = 0; $i < count($tableau); $i++) {
+    if ($tableau[$i] < 20 && $tableau[$i] > 0) {
+        $moyenne[] = $tableau[$i];
+    }
+
+    if ($tableau[$i] < 0) {
+        $inferieur[] = $tableau[$i];
+    }
+
+    if ($tableau[$i] > 100) {
+        $superieur[] = $tableau[$i];
+    }
+}
+
+echo '1) tableau ne comprenant que des valeurs compris entre 0 et 20 ayant pour nom de variable $moyenne <br/>';
+
+echo '$moyenne = [';
+for ($i = 0; $i < count($moyenne); $i++) {
+    echo " " . $moyenne[$i] . " , ";
+}
+echo '] <br/> <br/>';
+
+echo '2) tableau ne comprenant que des valeurs compris inférieur à  0 ayant pour nom de variable $inferieur <br/>';
+
+echo '$inferieur = [';
+for ($i = 0; $i < count($inferieur); $i++) {
+    echo " " . $inferieur[$i] . " , ";
+}
+echo ']<br/><br/>';
+echo '3) tableau ne comprenant que des valeurs compris supérieur  à 100 ayant pour nom de variable $superieur <br/>';
+
+echo '$inferieur = [';
+for ($i = 0; $i < count($superieur); $i++) {
+    echo " " . $superieur[$i] . " , ";
+}
+echo ']<br/><br/>';
+
+echo "=================================================";
+
+$alphabet = ["a", "b", "c", "d", "e"];
+$alpha = [];
+$delta = [];
+$beta = [];
+for ($i = 0; $i < count($alphabet); $i++) {
+    if ($i < 4) {
+        $alpha[] = $alphabet[$i];
+    }
+    if ($i > 0) {
+        $beta[] = $alphabet[$i];
+    }
+    if ($i > 2 || $i < 2) {
+        $delta[] = $alphabet[$i];
+    }
+}
+
+
+
+echo '1) créer un nouveau tableau sans la lettre "e" ayant pour nom alpha <br/>';
+
+echo '$alpha = [';
+for ($i = 0; $i < count($alpha); $i++) {
+    echo " " . $alpha[$i] . " , ";
+}
+echo '] <br/> <br/>';
+
+echo '2)créer un tableau sans la l\'indice 0 ayant pour nom beta <br/>';
+
+echo '$beta = [';
+for ($i = 0; $i < count($beta); $i++) {
+    echo " " . $beta[$i] . " , ";
+}
+echo ']<br/><br/>';
+echo '3) créer un tableau sans la valeur à l\'indice 2 ayant pour nom delta <br/>';
+
+echo '$delta = [';
+for ($i = 0; $i < count($delta); $i++) {
+    echo " " . $delta[$i] . " , ";
+}
+echo ']<br/><br/>';
+
+echo "=================================================";
+
+
+$letter = ['f', 'g', 'e', 'j', 'k'];
+
+for ($i = 0; $i < count($letter); $i++) {
+    $alpha[] = $letter[$i];
+}
+echo '<br/> 4) ajouter au tableau alpha  ,"f", "g", "e", "j", "k" (BONUS)<br/>';
+
+echo '$alpha = [';
+for ($i = 0; $i < count($alpha); $i++) {
+    echo " " . $alpha[$i] . " , ";
+}
+echo ']<br/><br/>';
+
+echo "=================================================";
